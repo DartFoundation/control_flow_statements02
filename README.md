@@ -102,12 +102,12 @@ Output: 0
 
 ## if05
 
-  Find the largest digit of the five-digit number.
+  Find the largest digit of the four-digit number.
 
 **Example 1:**
 
 ```Dart
-Input: n=23546
+Input: n=2546
 Output: 6
 
 ```
@@ -117,20 +117,20 @@ Output: 6
 
 ## if06
 
-  Find the index of the largest digit of the five-digit number.
+  Find the index of the largest digit of the four-digit number.
 
 **Example 1:**
 
 ```Dart
-Input: n=76514
-Output: 5
+Input: n=7654
+Output: 4
 
 ```
 
 **Example 2:**
 
 ```Dart
-Input: a=54694
+Input: a=4694
 Output: 2
 
 ```
