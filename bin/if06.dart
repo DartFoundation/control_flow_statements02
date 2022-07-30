@@ -1,8 +1,8 @@
 /* 
 Create function called func
-Find the index of the largest digit of the five-digit number.
+Find the index of the largest digit of the four-digit number.
 Args:
-    n: Five-digit number.
+    n: four-digit number.
 Returns:
     int: return answer. 
 */
