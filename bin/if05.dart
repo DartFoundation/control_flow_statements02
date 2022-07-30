@@ -1,6 +1,6 @@
 /*
 Create function called func
-Find the largest digit of the five-digit number.
+Find the largest digit of the four-digit number.
 Args:
     n: Five-digit number.
 Returns:
