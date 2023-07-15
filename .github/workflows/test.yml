@@ -9,13 +9,6 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-        with:
-          repository: dart-test-2022/control_flow_statements2_test
-          token: ${{secrets.TEST_KEY}}
-          path: test
-
       - name: Install dependencies
         uses: dart-lang/setup-dart@v1.3
 
@@ -24,13 +17,12 @@ jobs:
       
       - run: touch tests.json
     
-      - run: dart test --file-reporter json:tests.json
-        continue-on-error: true
+      - run: dart test
         
-      - run: python test/conftest.py 
+      # - run: python test/conftest.py 
 
-      - name: Natijalar
-        run: |
-          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
-          echo $CHANGED_FILES
-          python test/sendtest.py ${{github.actor}} '${{github.repository}}' "$CHANGED_FILES"
+      # - name: Natijalar
+      #   run: |
+      #     CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
+      #     echo $CHANGED_FILES
+      #     python test/sendtest.py ${{github.actor}} '${{github.repository}}' "$CHANGED_FILES"
